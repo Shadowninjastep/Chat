@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Message Interface</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet">
+  <link rel="script" href="java.js">
+</head>
+<body>
+
+<div id="wrapper">
+  <div class="container">
+    <aside class="users">
+      <header>
+        <h1>Chat With Friends</h1>
+      </header>
+      <ul>
+        <li>
+          <div class="avatar top">
+            <img src="Dale.jpg" alt="Dale">
+            <div class="online"></div>
+          </div>
+          <div class="users-list">
+            <div class="username">
+              <a href="Dalechat.html" class="Dale"><p>Dale Dubia</p></a>
+            </div>
+            <div class="text">
+              <p>Bro You Ready To Work Out Or Naw</p>
+            </div>
+          </div>
+          <div class="timestamp">
+            <p>12:51 PM</p>
+          </div>
+        </li>
+        <li>
+          <div class="avatar top">
+            <img src="Audrey.jpg" alt="Audrey">
+            <div class="online offline"></div>
+          </div>
+          <div class="users-list">
+            <div class="username">
+              <a href="chat.html"><p>Audrey Nyugen</p></a>
+            </div>
+            <div class="text">
+               <p>Chillin with my Boi You?</p>
+            </div>
+          </div>
+          <div class="timestamp">
+            <p>3:31 PM</p>
+          </div>
+        </li>
+        <li>
+          <div class="avatar top">
+            <img src="Andrew.jpg" alt="Andrew">
+            <div class="online invisible"></div>
+          </div>
+          <div class="users-list">
+            <div class="username">
+              <a href="Andrewchat.html"> <p>Andrew Ciccheli</p></a>
+            </div>
+            <div class="text">
+              <p>Coding is Life</p>
+            </div>
+          </div>
+          <div class="timestamp">
+            <p>1:00 PM</p>
+          </div>
+        </li>
+        <li>
+          <div class="avatar top">
+            <img src="Alex.jpg" alt="Alex">
+            <div class="online busy"></div>
+          </div>
+          <div class="users-list">
+            <div class="username">
+              <p>Alex Stock</p>
+            </div>
+            <div class="text">
+              <p>Bro You need to upgrade your wardrobe</p>
+            </div>
+          </div>
+          <div class="timestamp">
+            <p>10:08 AM</p>
+          </div>
+        </li>
+        <li>
+          <div class="avatar top">
+            <img src="me.jpg" alt="Braylen">
+            <div class="online away"></div>
+          </div>
+          <div class="users-list">
+            <div class="username">
+              <a href="Braylenchat.html"> <p>Braylen Lucas</p></a>
+            </div>
+            <div class="text">
+              <p>My Dude did you watch the new episode</p>
+            </div>
+          </div>
+          <div class="timestamp">
+            <p>9:15 PM</p>
+          </div>
+        </li>
+      </ul>
+    </aside>
+    <section id="chat-screen" >
+      <section id="messages">
+        <article>
+          <div class="avatar">
+            <img src="Bert.jpg" alt="Bert">
+          </div>
+          <div class="msg">
+            <div class="pointer"></div>
+            <div class="inner-msg">
+              <p>You know it Bruther <i class="em em-sunglasses"></i></p></div>
+          </div>
+        </article>
+        <article class="right">
+          <div class="avatar">
+            <img src="me.jpg" alt="Braylen">
+          </div>
+          <div class="msg">
+            <div class="pointer"></div>
+            <div class="inner-msg">
+              <p><img src="thanos.gif"></p>
+            </div>
+          </div>
+        </article>
+        <article>
+          <div class="avatar">
+            <img src="Bert.jpg" alt="Bert">
+          </div>
+          <div class="msg">
+            <div class="pointer"></div>
+            <div class="inner-msg">
+              <p><img src="DVA.gif" width="250" height="250"> </p>
+            </div>
+          </div>
+        </article>
+        <article class="right">
+          <div class="avatar">
+            <img src="me.jpg" alt="Braylen">
+          </div>
+          <div class="msg">
+            <div class="pointer"></div>
+            <div class="inner-msg">
+              <p><img src="Luigi.jpg" height="200" width="210"></p>
+            </div>
+          </div>
+        </article>
+        <article>
+          <div class="avatar">
+            <img src="Bert.jpg" alt="Bert">
+          </div>
+          <div class="msg">
+            <div class="pointer"></div>
+            <div class="inner-msg">
+              <p class="text"><img src="nothingpersonal.png" width="175" height="225"></p>
+            </div>
+          </div>
+        </article>
+      </section>
+      <div class="msg-compose">
+        <i class="fas fa-paperclip"></i>
+        <form class="form">
+          <input type="text" placeholder="Type Something Here..." name="message-to-send" id="message-to-send">
+          <button type="submit" id="button" onclick="Myfunction()"><i class="fab fa-telegram-plane"></i></button>
+        </form>
+      </div>
+
+    </section>
+
+  </div>
+
+</div>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3/jquery.min.js"></script>
+<script src="java.js">
+</script>
+<!--<script>
+  function Myfunction(){
+    var name_element = document.getElementById('message-to-send');
+    var name = name_element.value();
+    name.appendTo('#messages');
+
+  }
+</script> !-->
+</body>
+</html>

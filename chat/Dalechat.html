@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Message Interface</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="script" href="java.js">
+</head>
+<body>
+
+<div id="wrapper">
+  <div class="container">
+    <aside class="users">
+      <header>
+        <h1>Chat With Friends</h1>
+      </header>
+      <ul>
+        <li>
+          <div class="avatar top">
+            <img src="Dale.jpg" alt="Dale">
+            <div class="online"></div>
+          </div>
+          <div class="users-list">
+            <div class="username">
+              <a href="Dalechat.html" class="Dale"><p>Dale Dubia</p></a>
+            </div>
+            <div class="text">
+              <p>Bro You Ready To Work Out Or Naw</p>
+            </div>
+          </div>
+          <div class="timestamp">
+            <p>12:51 PM</p>
+          </div>
+        </li>
+        <li>
+          <div class="avatar top">
+            <img src="Audrey.jpg" alt="Audrey">
+            <div class="online offline"></div>
+          </div>
+          <div class="users-list">
+            <div class="username">
+              <a href="chat.html"> <p>Audrey Nyugen</p></a>
+            </div>
+            <div class="text">
+              <p>Chillin with my Boi You?</p>
+            </div>
+          </div>
+          <div class="timestamp">
+            <p>3:31 PM</p>
+          </div>
+        </li>
+        <li>
+          <div class="avatar top">
+            <img src="Andrew.jpg" alt="Andrew">
+            <div class="online invisible"></div>
+          </div>
+          <div class="users-list">
+            <div class="username">
+              <a href="Andrewchat.html"> <p>Andrew Ciccheli</p></a>
+            </div>
+            <div class="text">
+              <p>Coding is Life</p>
+            </div>
+          </div>
+          <div class="timestamp">
+            <p>1:00 PM</p>
+          </div>
+        </li>
+        <li>
+          <div class="avatar top">
+            <img src="Alex.jpg" alt="Alex">
+            <div class="online busy"></div>
+          </div>
+          <div class="users-list">
+            <div class="username">
+              <p>Alex Stock</p>
+            </div>
+            <div class="text">
+              <p>Bro You need to upgrade your wardrobe</p>
+            </div>
+          </div>
+          <div class="timestamp">
+            <p>10:08 AM</p>
+          </div>
+        </li>
+        <li>
+          <div class="avatar top">
+            <img src="me.jpg" alt="Braylen">
+            <div class="online away"></div>
+          </div>
+          <div class="users-list">
+            <div class="username">
+              <a href="Braylenchat.html"> <p>Braylen Lucas</p></a>
+            </div>
+            <div class="text">
+              <p>My Dude did you watch the new episode</p>
+            </div>
+          </div>
+          <div class="timestamp">
+            <p>9:15 PM</p>
+          </div>
+        </li>
+      </ul>
+    </aside>
+    <section id="chat-screen" >
+      <section id="messages">
+        <article>
+          <div class="avatar">
+            <img src="Bert.jpg" alt="Bert">
+          </div>
+          <div class="msg">
+            <div class="pointer"></div>
+            <div class="inner-msg">
+              <p>Alright Sure</p></div>
+          </div>
+        </article>
+        <article class="right">
+          <div class="avatar">
+            <img src="Dale.jpg" alt="Audrey">
+          </div>
+          <div class="msg">
+            <div class="pointer"></div>
+            <div class="inner-msg">
+              <p><img src="bet.jpg" width="200" height="200"> </p>
+            </div>
+          </div>
+        </article>
+        <article>
+          <div class="avatar">
+            <img src="Bert.jpg" alt="Bert">
+          </div>
+          <div class="msg">
+            <div class="pointer"></div>
+            <div class="inner-msg">
+              <p>What time should we meet up?</p>
+            </div>
+          </div>
+        </article>
+        <article class="right">
+          <div class="avatar">
+            <img src="Dale.jpg" alt="Audrey">
+          </div>
+          <div class="msg">
+            <div class="pointer"></div>
+            <div class="inner-msg">
+              <p>Uhhh 6:30 sound good to you?</p>
+            </div>
+          </div>
+        </article>
+        <article>
+          <div class="avatar">
+            <img src="Bert.jpg" alt="Bert">
+          </div>
+          <div class="msg">
+            <div class="pointer"></div>
+            <div class="inner-msg">
+              <p class="text">I'm down sounds good to me</p>
+            </div>
+          </div>
+        </article>
+      </section>
+      <div class="msg-compose">
+        <i class="fas fa-paperclip"></i>
+        <form class="form">
+          <input type="text" placeholder="Type Something Here..." name="message-to-send" id="message-to-send">
+          <button id="button" onclick="chat()"><i class="fab fa-telegram-plane"></i></button>
+        </form>
+      </div>
+
+    </section>
+
+  </div>
+
+</div>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3/jquery.min.js"></script>
+<script src="java.js"></script>
+<script id="message-template" type="text/x-handlebars-template">
+  <article>
+  <div class="avatar">
+    <img src="Bert.jpg" alt="Bert">
+  </div>
+    <div class="msg">
+      <div class="pointer"></div>
+      <div class="inner-msg">
+        {{messageOutput}}
+    </div>
+    </div>
+  </article>
+</script>
+<script id="message-response-template" type="text/x-handlebars-template">
+  <div class="avatar">
+    <img src="Dale.jpg" alt="Audrey">
+  </div>
+  <div class="msg">
+    <div class="pointer"></div>
+    <div class="inner-msg">
+      {{response}}
+    </div>
+  </div>
+</script>
+</body>
+</html>

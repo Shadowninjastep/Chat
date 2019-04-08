@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> Login Form</title>
+    <script>
+        function validateLogin(){
+    var username = document.forms["login"]["username"];
+    var password = document.forms["login"]["password"];
+    var url= "https://youtu.be/VKsVSBhSwJg?t=101"; 
+            if (username.value == "") {
+            window.alert("Please enter a username; the correct one would be great.");
+            }
+            if (password.value == "") {
+                window.alert("Please enter the valid password or else....");
+            }
+            if (username.value == "user" && password.value != "secret") {
+                window.alert("Oh no...what have you done!");
+               
+                
+            }
+            return true;
+}
+    </script>
+
+</head>
+
+<body>
+    <h2>Login</h2>
+    <form id="login" action="checklogin.php" onsubmit="return validateLogin()" method="post">
+        <fieldset>
+            <legend>Enter Login Information</legend>
+            Username:
+            <input type="text" name="username" value="user">
+            <br>Password:
+            <input type="password" name="password" value="secret">
+            <br>
+            <input type="submit" value="Submit">
+            <input type="reset" value="Clear Fields">
+        </fieldset>
+    </form>
+
+</body>
+
+</html>
